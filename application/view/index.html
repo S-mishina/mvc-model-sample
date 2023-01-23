@@ -1,0 +1,22 @@
+<h1>Todo List</h1>
+<p><a href="/create">新規作成</a></p>
+
+<table>
+    <thead>
+        <tr>
+        <th scope="col">タスク名</th>
+        <th scope="col">優先順位</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{ range .todo }}
+    <tr>
+        <td>&emsp;&emsp;{{ .title }}</td>
+        <td>&emsp;&emsp;{{ .priority }}</td>
+        <td>&emsp;&emsp;<a href="/detail/{{.id}}">詳細</a></td>
+        <td>&emsp;<a href="/update/{{.id}}">編集</a></td>
+        <td>&emsp;<a href="/delete/detail/{{.id}}">削除</a></td>
+    </tr>
+    {{ end }}
+    </tbody>
+</table>

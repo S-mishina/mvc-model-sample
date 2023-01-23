@@ -1,0 +1,45 @@
+{{ range .detail }}
+<form action="detail/{{ .id }}" method="POST">
+    <table>
+        <tr>
+    <th><label for="id_title">タスク名:</label></th>
+    <td>
+      <input type="text" name="title" maxlength="20" required id="id_title" value="{{ .title }}">
+    </td>
+  </tr>
+
+  <tr>
+    <!-- <th><label for="id_deadline">日時:</label></th> -->
+    <!-- <td>
+      <input type="text" name="deadline" required id="id_deadline">
+    </td> -->
+  </tr>
+
+  <tr>
+    <th><label for="id_priority">優先順位:</label></th>
+    <td>
+<select name="priority" id="id_priority">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+  <script>
+  var priority = {{.priority}};
+  console.log(priority)
+  document.getElementById("id_priority").value = priority;
+  </script>
+    </td>
+  </tr>
+  <tr>
+    <th><label for="id_detail">詳細:</label></th>
+    <td>
+      <textarea name="detail" cols="40" rows="10" id="id_detail">{{ .body }}</textarea>
+    </td>
+  </tr>
+    </table>
+    {{ end }}
+<input type="submit" value="登録">
+</form>
+<a href="/">戻る</a>

@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  db:
+    build: ./database
+    container_name: gin_db_server
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: test
+      TZ: Asia/Tokyo
+    volumes:
+      - ./db-data:/var/lib/mysql
+      - ./database/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+    command: mysqld
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping","-ppass"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

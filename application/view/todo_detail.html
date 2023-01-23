@@ -1,0 +1,11 @@
+<h1>Todo Detail</h1>
+<div>
+    {{ range .detail }}
+    <h2>タイトル:{{.title}}</h2>
+    <h3>優先度</h3>
+    <p>{{.priority}}</p>
+    <h3>内容</h3>
+    <pre>{{ .body }}</pre>
+    {{ end }}
+</div>
+<a href="/">戻る</a>
