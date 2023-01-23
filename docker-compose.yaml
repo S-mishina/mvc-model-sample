@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  db:
+    build: ./infra/database
+    container_name: gin_db_server
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: test
+      TZ: Asia/Tokyo
+    volumes:
+      - ./infra/db-data:/var/lib/mysql
+      - ./infra/database/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+    command: mysqld
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping","-ppass"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app_net
+  application:
+    build: ./application
+    container_name: gin_application_server
+    ports:
+      - '8001:8001'
+    environment:
+      MYSQL_ROOT_ID: root
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: test
+      ENV_FLAG: 1
+    depends_on:
+      - "db"
+    networks:
+      - app_net
+networks:
+  app_net:
+    driver: bridge

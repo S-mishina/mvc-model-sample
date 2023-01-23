@@ -11,8 +11,8 @@ services:
       MYSQL_DATABASE: test
       TZ: Asia/Tokyo
     volumes:
-      - ./db-data:/var/lib/mysql
-      - ./database/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+      - .db-data:/var/lib/mysql
+      - .database/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
     command: mysqld
     healthcheck:
       test: ["CMD", "mysqladmin", "ping","-ppass"]
