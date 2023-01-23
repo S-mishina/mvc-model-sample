@@ -4,11 +4,11 @@ package enttest
 
 import (
 	"context"
-	"learn-gin-mvc/application/model/orm/ent"
+	"mvc-model-sample/application/model/orm/ent"
 	// required by schema hooks.
-	_ "learn-gin-mvc/application/model/orm/ent/runtime"
+	_ "mvc-model-sample/application/model/orm/ent/runtime"
 
-	"learn-gin-mvc/application/model/orm/ent/migrate"
+	"mvc-model-sample/application/model/orm/ent/migrate"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

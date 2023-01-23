@@ -6,8 +6,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"learn-gin-mvc/application/model/orm/ent/predicate"
-	"learn-gin-mvc/application/model/orm/ent/todolist"
+	"mvc-model-sample/application/model/orm/ent/predicate"
+	"mvc-model-sample/application/model/orm/ent/todolist"
 	"time"
 
 	"entgo.io/ent/dialect/sql"

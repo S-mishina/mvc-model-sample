@@ -9,7 +9,7 @@ import (
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql/schema"
 	_ "github.com/go-sql-driver/mysql"
-	"learn-gin-mvc/application/model/orm/ent/migrate"
+	"mvc-model-sample/application/model/orm/ent/migrate"
 )
 
 func main() {

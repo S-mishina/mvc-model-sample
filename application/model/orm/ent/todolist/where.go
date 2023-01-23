@@ -3,7 +3,7 @@
 package todolist
 
 import (
-	"learn-gin-mvc/application/model/orm/ent/predicate"
+	"mvc-model-sample/application/model/orm/ent/predicate"
 	"time"
 
 	"entgo.io/ent/dialect/sql"

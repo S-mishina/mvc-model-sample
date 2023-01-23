@@ -1,6 +1,6 @@
 package main
 
-import "learn-gin-mvc/application/controller"
+import "mvc-model-sample/application/controller"
 
 func main() {
 	router := controller.GetRouter()

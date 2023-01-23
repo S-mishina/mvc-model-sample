@@ -3,7 +3,7 @@ package config
 import (
     "context"
     "log"
-    "learn-gin-mvc/application/model/orm/ent"
+    "mvc-model-sample/application/model/orm/ent"
     _ "github.com/go-sql-driver/mysql"
 )
 

@@ -3,8 +3,8 @@
 package ent
 
 import (
-	"learn-gin-mvc/application/model/orm/ent/schema"
-	"learn-gin-mvc/application/model/orm/ent/todolist"
+	"mvc-model-sample/application/model/orm/ent/schema"
+	"mvc-model-sample/application/model/orm/ent/todolist"
 	"time"
 )
 

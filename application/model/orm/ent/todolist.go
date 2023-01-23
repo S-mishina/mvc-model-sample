@@ -4,7 +4,7 @@ package ent
 
 import (
 	"fmt"
-	"learn-gin-mvc/application/model/orm/ent/todolist"
+	"mvc-model-sample/application/model/orm/ent/todolist"
 	"strings"
 	"time"
 

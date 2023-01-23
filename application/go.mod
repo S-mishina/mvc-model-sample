@@ -1,4 +1,4 @@
-module learn-gin-mvc/application
+module mvc-model-sample/application
 
 go 1.19
 

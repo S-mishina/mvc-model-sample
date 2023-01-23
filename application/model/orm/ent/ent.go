@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"learn-gin-mvc/application/model/orm/ent/todolist"
+	"mvc-model-sample/application/model/orm/ent/todolist"
 	"reflect"
 
 	"entgo.io/ent"

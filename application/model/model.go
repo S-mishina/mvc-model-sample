@@ -4,8 +4,8 @@ import (
     "time"
     "context"
     "log"
-    "learn-gin-mvc/application/config"
-    "learn-gin-mvc/application/model/orm/ent/todolist"
+    "mvc-model-sample/application/config"
+    "mvc-model-sample/application/model/orm/ent/todolist"
     "encoding/json"
 )
 

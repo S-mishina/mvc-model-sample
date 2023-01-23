@@ -5,7 +5,7 @@ package hook
 import (
 	"context"
 	"fmt"
-	"learn-gin-mvc/application/model/orm/ent"
+	"mvc-model-sample/application/model/orm/ent"
 )
 
 // The TodolistFunc type is an adapter to allow the use of ordinary

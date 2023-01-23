@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"log"
 
-	"learn-gin-mvc/application/model/orm/ent/migrate"
+	"mvc-model-sample/application/model/orm/ent/migrate"
 
-	"learn-gin-mvc/application/model/orm/ent/todolist"
+	"mvc-model-sample/application/model/orm/ent/todolist"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"

@@ -2,7 +2,7 @@
 
 package runtime
 
-// The schema-stitching logic is generated in learn-gin-mvc/application/model/orm/ent/runtime.go
+// The schema-stitching logic is generated in mvc-model-sample/application/model/orm/ent/runtime.go
 
 const (
 	Version = "v0.11.5"                                         // Version of ent codegen.

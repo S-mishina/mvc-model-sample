@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"learn-gin-mvc/application/model"
+	"mvc-model-sample/application/model"
 	"strconv"
 	"log"
 )

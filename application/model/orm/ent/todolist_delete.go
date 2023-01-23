@@ -4,8 +4,8 @@ package ent
 
 import (
 	"context"
-	"learn-gin-mvc/application/model/orm/ent/predicate"
-	"learn-gin-mvc/application/model/orm/ent/todolist"
+	"mvc-model-sample/application/model/orm/ent/predicate"
+	"mvc-model-sample/application/model/orm/ent/todolist"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
