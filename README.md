@@ -8,6 +8,19 @@
 
 ## ディレクトリ構造
 
+### 全体のディレクトリ構成
+
+```terminal:全体のディレクトリ構成
+├── application/
+├── infra/
+```
+
+`application/`: Web Applicationに関するコードが格納されています。
+
+`infra/`: infraに関するコードが格納されています。
+
+### applicationのディレクトリ構成
+
 ```terminal:ディレクトリ構造
 ├── application/
 │   ├── config/
@@ -37,6 +50,19 @@ application配下のディレクトリについて解説します。
 
 `controller/`: MVCモデルにおける(Controller)に関係するコード(Router、controller)が格納されています。
 
+applicationディレクトリ直下に置かれているファイルは基本的に、Goアプリケーションを構成する際に必要なファイルが置かれています。
+
+ex) go.mod、go.sum、main.go、Dockerfile、docker-compose.yamlなど
+
+### infraのディレクトリ構成
+
+```terminal:ディレクトリ構造
+├── infra/
+    ├── database/
+```
+
+`database/`: データベース(mysql)コンテナを起動させるのに必要なファイルが置かれています。ex) mysql.conf、Dockerfile
+
 ## 本プログラムの実行方法
 
 ### dockerを使ってアプリケーションを立ち上げる場合
@@ -57,7 +83,7 @@ application配下のディレクトリについて解説します。
 
 2. アプリケーションを起動させる。
 
-```
+```terminal:アプリケーションの起動方法
 > go run main.go
 ```
 
