@@ -87,6 +87,16 @@ ex) go.mod、go.sum、main.go、Dockerfile、docker-compose.yamlなど
 > go run main.go
 ```
 
+
+### DBのマイグレーション
+
+アプリケーションを初回実行した場合にはDBにマイグレーションを行う必要があります。
+
+```terminal:
+# application配下まで移動する
+> application/tools/run_migration.sh -v <migration version> -e root:pass@localhost:3306/test -f migration/
+```
+
 ## 参考文献
 
 後日記入
