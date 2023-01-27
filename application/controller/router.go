@@ -11,7 +11,7 @@ func GetRouter() *gin.Engine {
 	r.GET("/create", CreatedTodo)
 	r.GET("/detail/:id", ShowDetail)
 	r.GET("/update/:id", UpdateDetail)
-	r.POST("/create", PostTodo)
+	r.POST("/post_create", PostTodo)
 	r.POST("update/detail/:id", UpdateDataDetail)
 	r.GET("delete/detail/:id", DeleteDataDetail)
 	return r
