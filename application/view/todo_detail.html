@@ -1,11 +1,47 @@
-<h1>Todo Detail</h1>
-<div>
-    {{ range .detail }}
-    <h2>タイトル:{{.title}}</h2>
-    <h3>優先度</h3>
-    <p>{{.priority}}</p>
-    <h3>内容</h3>
-    <pre>{{ .body }}</pre>
-    {{ end }}
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <head>
+
+<div class="container is-max-desktop">
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <strong>MVC model sample application</strong>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/create">新規作成</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  {{ range .detail }}
+  <div class="card">
+    <div class="card-content">
+      <p class="title is-4">タイトル:{{.title}}</p>
+      <div class="ticket-info columns">
+        <div class="column is-2">
+          <i class="fas fa-label"></i>
+          <span class="ticket-info-value">優先度:{{.priority}}</span>
+        </div>
+        <div class="column is-2">
+          <i class="far fa-calendar-alt"></i>
+          <span class="ticket-info-value">作成日:{{.created_at}}</span>
+        </div>
+      </div>
+      <div class="ticket-description">
+        <p>本文</p>
+        <pre>{{ .body }}</pre>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a href="/" class="card-footer-item">戻る</a>
+    </footer>
+  </div>
+  {{ end }}
 </div>
-<a href="/">戻る</a>

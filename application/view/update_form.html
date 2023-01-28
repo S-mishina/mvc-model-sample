@@ -1,45 +1,65 @@
-{{ range .detail }}
-<form action="detail/{{ .id }}" method="POST">
-    <table>
-        <tr>
-    <th><label for="id_title">タスク名:</label></th>
-    <td>
-      <input type="text" name="title" maxlength="20" required id="id_title" value="{{ .title }}">
-    </td>
-  </tr>
-
-  <tr>
-    <!-- <th><label for="id_deadline">日時:</label></th> -->
-    <!-- <td>
-      <input type="text" name="deadline" required id="id_deadline">
-    </td> -->
-  </tr>
-
-  <tr>
-    <th><label for="id_priority">優先順位:</label></th>
-    <td>
-<select name="priority" id="id_priority">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-  <script>
-  var priority = {{.priority}};
-  console.log(priority)
-  document.getElementById("id_priority").value = priority;
-  </script>
-    </td>
-  </tr>
-  <tr>
-    <th><label for="id_detail">詳細:</label></th>
-    <td>
-      <textarea name="detail" cols="40" rows="10" id="id_detail">{{ .body }}</textarea>
-    </td>
-  </tr>
-    </table>
-    {{ end }}
-<input type="submit" value="登録">
-</form>
-<a href="/">戻る</a>
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <head>
+    {{ range .detail }}
+  <div class="container is-max-desktop">
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <strong>MVC model sample application</strong>
+      </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/create">新規作成</a>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <form action="detail/{{ .id }}" method="POST">
+    <div class="field">
+      <label class="label">タスク名</label>
+      <div class="control">
+        <input class="input" type="text" name="title" maxlength="20" required id="id_title" value="{{ .title }}">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">優先順位</label>
+      <div class="control">
+        <div class="select">
+          <select name="priority" id="id_priority">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <script>
+          var priority = {{.priority}};
+          console.log(priority)
+          document.getElementById("id_priority").value = priority;
+        </script>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">詳細</label>
+      <div class="control">
+        <textarea class="textarea" name="detail" id="id_detail">{{ .body }}</textarea>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <input class="button is-link" type="submit" value="登録">
+      </div>
+      <div class="control">
+        <a class="button is-text" href="/">戻る</a>
+      </div>
+    </div>
+  </form>
+  {{ end }}
+  </div>
