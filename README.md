@@ -74,6 +74,22 @@ ex) go.mod、go.sum、main.go、Dockerfile、docker-compose.yamlなど
 
 ### dockerを使わずにアプリケーションを起動させる場合
 
+<br>
+(備考)
+
+ローカルでアプリケーションを実行する際には、.envファイルを読み込む必要があります。
+
+`/application`配下に`.env`ファイルを作成します。
+
+```:.env
+MYSQL_ROOT_ID=root
+MYSQL_ROOT_PASSWORD=pass
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_DATABASE=test
+```
+### 起動方法
+
 1. DBは、docker containerで起動させる。
 
 ```terminal:terminal
@@ -86,7 +102,6 @@ ex) go.mod、go.sum、main.go、Dockerfile、docker-compose.yamlなど
 ```terminal:アプリケーションの起動方法
 > go run main.go
 ```
-
 
 ### DBのマイグレーション
 
