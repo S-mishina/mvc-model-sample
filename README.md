@@ -3,9 +3,7 @@
 このリポジトリは、MVCモデルで作成されたSample WEB Applicationです。 本プログラムは、Go言語のWEB Application Framework Gin を利用して作成されています。
 
 ## MVCとは？
-
-後日記入
-
+![mvc model](docs/image/mvc-model.png)
 ## ディレクトリ構造
 
 ### 全体のディレクトリ構成
