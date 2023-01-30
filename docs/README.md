@@ -1,3 +1,4 @@
+[日本語](README-jp.md)
 # introduction
 
 This repository is a Sample WEB Application created in the MVC model. This program was created using the WEB Application Framework Gin of the Go language.
