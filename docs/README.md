@@ -1,9 +1,11 @@
 [日本語](README-jp.md)
+
 # introduction
 
 This repository is a Sample WEB Application created in the MVC model. This program was created using the WEB Application Framework Gin of the Go language.
 
 ## What is MVC?
+
 ![mvc model](image/mvc-model.png)
 
 ## Directory Structures
@@ -18,50 +20,6 @@ This repository is a Sample WEB Application created in the MVC model. This progr
 `application/`: The code related to Web Application is stored.
 
 `infra/`: Codes related to infra are stored.
-
-### directory structure of application
-
-```terminal:Directory Structures
-├── application/
-│   ├── config/
-│   ├── controller/
-│   ├── docs/
-│   ├── migration/
-│   ├── model/
-│   │   └── orm/
-│   │       └── ent/
-│   ├── tools/
-│   └── view/
-```
-
-This section describes the directories under application.
-
-`config/`: It contains connection information and connection-related code for the BACKEND system (DB, etc.).
-
-`docs/`: Contains documentation data about the application, ex) ER diagrams, Go doc, etc.
-
-`migration/`: The migration file is stored.
-
-`tools/`: It contains tools related to the application.
-
-`model/`:The code related to M (Model) in the MVC model is stored. ORM code is also included in the model.
-
-`view/`: The code related to V (View) in the MVC model is stored.
-
-`controller/`: The code (router, controller) related to (Controller) in the MVC model is stored.
-
-The files located directly under the application directory are basically the files needed to configure a Go application.
-
-ex) go.mod, go.sum, main.go, Dockerfile, docker-compose.yaml, etc.
-
-### infra directory structure
-
-```terminal:infra directory structure
-├── infra/
-    ├── database/
-```
-
-`database/`: The files necessary to start the database (mysql) container are located here. ex) mysql.conf, Dockerfile
 
 ## How to execute this program
 
